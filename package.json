@@ -1,0 +1,19 @@
+{
+  "name": "ayah-jar",
+  "version": "1.0.0",
+  "description": "Digital Quran Ayah Jar - A comforting web app with Islamic features",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": ["quran", "islamic", "ayah", "mern", "react", "node"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
