@@ -1,0 +1,274 @@
+/* frontend/src/components/Jar/Jar.css */
+
+.jar-container {
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.jar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.jar-title {
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  color: #1B5E20 !important;
+  margin-bottom: 16px !important;
+}
+
+.jar-subtitle {
+  color: #666 !important;
+  font-size: 1.2rem !important;
+}
+
+/* Emotion Buttons */
+.emotion-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.emotion-button {
+  padding: 10px 20px !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  border-width: 2px !important;
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.emotion-emoji {
+  font-size: 1.2rem;
+}
+
+.emotion-label {
+  font-size: 1rem;
+}
+
+.emotion-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Shake Button */
+.shake-button-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.shake-button {
+  padding: 16px 48px !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(45deg, #2E7D32 30%, #4CAF50 90%) !important;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.shake-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.4) !important;
+  background: linear-gradient(45deg, #1B5E20 30%, #388E3C 90%) !important;
+}
+
+.shake-button:active {
+  transform: translateY(-1px);
+}
+
+/* Error Alert */
+.error-alert {
+  margin-bottom: 20px;
+  border-radius: 12px !important;
+}
+
+/* Ayah Card */
+.ayah-card {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 20px !important;
+  overflow: visible !important;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ayah-content {
+  padding: 40px !important;
+}
+
+/* Arabic Text */
+.arabic-text {
+  font-family: 'Traditional Arabic', 'Arabic Typesetting', 'Amiri', serif !important;
+  font-size: 2.5rem !important;
+  line-height: 1.8 !important;
+  color: #1B5E20 !important;
+  margin-bottom: 30px !important;
+  text-align: center !important;
+  direction: rtl !important;
+  font-weight: 600 !important;
+}
+
+/* Translation Text */
+.translation-text {
+  font-size: 1.2rem !important;
+  line-height: 1.8 !important;
+  color: #333 !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+  font-style: italic !important;
+}
+
+/* Reference Text */
+.reference-text {
+  text-align: center !important;
+  color: #666 !important;
+  margin-bottom: 30px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.audio-button {
+  padding: 12px 32px !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.audio-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3) !important;
+}
+
+.share-button,
+.favorite-button {
+  transition: all 0.3s ease !important;
+}
+
+.share-button:hover,
+.favorite-button:hover {
+  transform: scale(1.1);
+}
+
+/* Audio Status */
+.audio-status {
+  margin-top: 15px !important;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jar-container {
+    padding: 40px 16px;
+  }
+
+  .jar-title {
+    font-size: 2.2rem !important;
+  }
+
+  .jar-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .emotion-buttons {
+    gap: 10px;
+  }
+
+  .emotion-button {
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .emotion-emoji {
+    font-size: 1rem;
+  }
+
+  .shake-button {
+    padding: 14px 36px !important;
+    font-size: 1rem !important;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .ayah-content {
+    padding: 30px 20px !important;
+  }
+
+  .arabic-text {
+    font-size: 2rem !important;
+  }
+
+  .translation-text {
+    font-size: 1.1rem !important;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .audio-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jar-title {
+    font-size: 1.8rem !important;
+  }
+
+  .emotion-buttons {
+    gap: 8px;
+  }
+
+  .emotion-button {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 120px;
+  }
+
+  .arabic-text {
+    font-size: 1.6rem !important;
+  }
+
+  .translation-text {
+    font-size: 1rem !important;
+  }
+}
