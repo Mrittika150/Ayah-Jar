@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const UserFavoriteSchema = new mongoose.Schema({
-  // Store by device/browser ID (from localStorage)
+  
   deviceId: {
     type: String,
     required: true
@@ -24,7 +24,6 @@ const UserFavoriteSchema = new mongoose.Schema({
   }
 });
 
-// Ensure unique combination of device and ayah
 UserFavoriteSchema.index({ deviceId: 1, ayahNumber: 1 }, { unique: true });
 
 module.exports = mongoose.model('UserFavorite', UserFavoriteSchema);

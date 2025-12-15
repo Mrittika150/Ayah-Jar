@@ -43,13 +43,23 @@ const Home = () => {
                   
                   {/* Glass Jar Body */}
                   <div className="jar-glass">
-                    {/* Floating paper pieces with Arabic symbols */}
+                    {/* Floating paper pieces with icons */}
                     <div className="jar-papers">
-                      <div className="paper-piece" style={{'--rotation': '-15deg'}}>📜</div>
-                      <div className="paper-piece" style={{'--rotation': '10deg'}}>✨</div>
-                      <div className="paper-piece" style={{'--rotation': '-8deg'}}>📖</div>
-                      <div className="paper-piece" style={{'--rotation': '12deg'}}>🤲</div>
-                      <div className="paper-piece" style={{'--rotation': '-5deg'}}>💚</div>
+                      <div className="paper-piece" style={{'--rotation': '-15deg'}}>
+                        <img src="scroll.png" alt="scroll" className="paper-icon" />
+                      </div>
+                      <div className="paper-piece" style={{'--rotation': '10deg'}}>
+                        <img src="star.png" alt="star" className="paper-icon" />
+                      </div>
+                      <div className="paper-piece" style={{'--rotation': '-8deg'}}>
+                        <img src="book.png" alt="book" className="paper-icon" />
+                      </div>
+                      <div className="paper-piece" style={{'--rotation': '12deg'}}>
+                        <img src="hands.png" alt="praying hands" className="paper-icon" />
+                      </div>
+                      <div className="paper-piece" style={{'--rotation': '-5deg'}}>
+                        <img src="heart.png" alt="heart" className="paper-icon" />
+                      </div>
                     </div>
                     
                     {/* Label on jar */}

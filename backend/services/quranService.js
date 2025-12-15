@@ -1,5 +1,4 @@
-// backend/services/quranService.js
-// EXPANDED VERSION - More verses, full text, better coverage!
+
 
 const fetch = require('node-fetch');
 
@@ -8,7 +7,7 @@ class QuranService {
     this.baseURL = 'https://api.alquran.cloud/v1';
     this.audioBaseURL = 'https://everyayah.com/data';
     
-    // EXPANDED emotion-based verse mappings with MORE verses
+    
     this.emotionVerses = {
       sad: [
         '2:286', '94:5', '94:6', '3:139', '13:28', '39:53', '2:153', '9:51',
@@ -43,7 +42,7 @@ class QuranService {
       ]
     };
 
-    // EXPANDED OFFLINE DATA with FULL verses (not truncated)
+    
     this.offlineVerses = {
       '2:286': {
         surah: 2, surahName: 'Al-Baqarah', surahNameArabic: 'البقرة', ayah: 286,
@@ -346,7 +345,7 @@ class QuranService {
       };
     }
 
-    // Ultimate fallback
+    
     return {
       ...this.offlineVerses['94:5'],
       audioUrl: this.getAudioURL(94, 5),

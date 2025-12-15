@@ -28,22 +28,22 @@ const Jar = () => {
   const ayahCardRef = useRef(null); // Reference to the ayah card
 
   const emotions = [
-    { value: 'sad', label: 'Sad', emoji: '😢', color: '#5C6BC0' },
-    { value: 'anxious', label: 'Anxious', emoji: '😰', color: '#EF5350' },
-    { value: 'happy', label: 'Happy', emoji: '😊', color: '#66BB6A' },
-    { value: 'grateful', label: 'Grateful', emoji: '🙏', color: '#FFA726' },
-    { value: 'stressed', label: 'Stressed', emoji: '😓', color: '#AB47BC' },
-    { value: 'hopeful', label: 'Hopeful', emoji: '✨', color: '#26C6DA' }
+    { value: 'sad', label: 'Sad', color: '#4d5cb1ff' },
+    { value: 'anxious', label: 'Anxious',  color: '#e36e6cff' },
+    { value: 'happy', label: 'Happy', color: '#90cc93ff' },
+    { value: 'grateful', label: 'Grateful',  color: '#ce9642ff' },
+    { value: 'stressed', label: 'Stressed',  color: '#e0b1e8ff' },
+    { value: 'hopeful', label: 'Hopeful', color: '#75aab1ff' }
   ];
 
-  // Auto-scroll to ayah card when ayah changes
+  
   useEffect(() => {
     if (ayah && ayahCardRef.current) {
-      // Small delay to let the card render fully
+      
       setTimeout(() => {
         ayahCardRef.current.scrollIntoView({
           behavior: 'smooth',
-          block: 'center', // Center the card in viewport
+          block: 'center', 
           inline: 'nearest'
         });
       }, 100);
@@ -51,7 +51,7 @@ const Jar = () => {
   }, [ayah]);
 
   const handleShakeJar = async () => {
-    // Stop audio if playing
+    
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current = null;
@@ -72,7 +72,7 @@ const Jar = () => {
     }
 
     if (!audioRef.current) {
-      // Create new audio element
+      
       audioRef.current = new Audio(ayah.audioUrl);
       
       audioRef.current.addEventListener('loadstart', () => {
@@ -98,11 +98,11 @@ const Jar = () => {
     }
 
     if (audioPlaying) {
-      // Pause
+      
       audioRef.current.pause();
       setAudioPlaying(false);
     } else {
-      // Play
+      
       setAudioLoading(true);
       audioRef.current.play()
         .then(() => {
@@ -146,7 +146,7 @@ const Jar = () => {
               }
             }}
           >
-            <span className="emotion-emoji">{emotion.emoji}</span>
+            
             <span className="emotion-label">{emotion.label}</span>
           </Button>
         ))}
